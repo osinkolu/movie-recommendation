@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<!--From https://codepen.io/frytyler/pen/EGdtg-->
+<head>
+  <meta charset="UTF-8">
+  <title>MOVIES RECOMMENDATION ALGORITHM</title>
+  <meta name="Description" content="Movie Recomender system">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='movie_recommend.css') }}">
+
+</head>
+
+<body><div class="flex-container"><a href="#top"><img id="logo" src="{{ url_for('static', filename='logo2.PNG') }}"></a></div>
+  <div class="text1"><p class="sampleText">MOVIE RECOMMENDER</p></div>
+  <p><h3> This page runs a <em>recommendation algorithm</em> that enables you to chek out similar movies to the ones you like so as to keep you watching what actually interests you.</h3></p>
+  <p> </p>
+  <img id="movies-clustered" src="{{ url_for('static', filename='background.PNG') }}" alt="clustered movies">
+    <p> </p> 
+  Keep yourself updated, don't miss out on new the 2020 release.<a href="https://www.imdb.com/list/ls020810230/" target = "_blank"> Click Here to check IMDB. </a>
+
+     <!-- Main Input For Receiving Query to our ML -->
+    <form action="{{ url_for('check_status')}}"method="post">
+      <h4>Use this recommendation Algorithm to check for similar movies you might love to watch. Simply input the name of a movie you like.</h4>
+    	<input type="text" name="YOUR MOVIE NAME" placeholder="YOUR MOVIE NAME " required="required" size="70" height="40" />
+
+        <button type="submit" class="btn btn-primary btn-block btn-large">check_status</button>
+    </form>
+
+   <br>
+   <br>
+   <div id="midArea">
+   {% for table in tables %}
+            {{titles[loop.index]}}
+            {{ table|safe }}
+{% endfor %}</div>
+
+   <!-- EMBEDDING THE MOVIE COMPANIES CHECK OUT-->
+<div class="weekly-movies">
+  
+  <div class="movie-logos"> 
+  <a class="movie-channel" href="https://www.netflix.com/"><img  src= "{{ url_for('static', filename='netflix.jpg') }}"width="150" height="50"></a>
+
+<!-- EMBEDDING THE HBO LOGO-->
+<a class="movie-channel" href="https://www.hbo.com/"><img src="{{ url_for('static', filename='hbo.jpg') }}" width="150" height="50"></a>
+
+<!-- EMBEDDING THE Marvel LOGO-->
+<a class="movie-channel" href="https://www.marvel.com/movies"><img src= "{{ url_for('static', filename='marvel.jpg') }}"width="150" height="50"></a>
+
+<!-- EMBEDDING THE DC LOGO-->
+<a class="movie-channel" href="https://www.dccomics.com/movies"><img src= "{{ url_for('static', filename='dc.jpg') }}" width="150" height="50"></a>
+
+
+<!-- EMBEDDING THE APPLE_TV LOGO-->
+<a class="movie-channel" href="https://www.apple.com/tv/"><img src="{{ url_for('static', filename='apple_tv.jpg') }}" width="130" height="50"></a>
+
+<!-- EMBEDDING DISNEY+ TV-->
+<a class="movie-channel" href="https://www.disneyplus.com/"><img src= "{{ url_for('static', filename='disney-plus.jpg') }}"width="130" height="50"></a>
+
+</div>
+   <!--Movie of the week-->
+  <h4>The Most Correlated Movie Series Of The Week: </h4>
+
+    <div class="movie-picture" >
+   <img id="each-weekly-pic" src="{{ url_for('static', filename='GOT.jpg') }}"width="300" height="168">
+   <img id="each-weekly-pic" src="{{ url_for('static', filename='the_witcher.jpg') }}"width="300" height="168">
+   <img id="each-weekly-pic" src="{{ url_for('static', filename='vickings.jpg') }}"width="300" height="168">
+   </div>
+
+    <div class="movie-audio">
+   <audio id="each-weekly-pic" controls=""><source src="{{ url_for('static', filename='gameofthronestrack.mp3')}}"type=""></audio>
+   <audio id="each-weekly-pic"  controls=""><source src="{{ url_for('static', filename='thewitchersoundtrack.mp3')}}"type=""></audio>
+    <audio id="each-weekly-pic" controls=""><source src="{{ url_for('static', filename='vickingsthemesong.mp3')}}"type=""></audio>
+    </div>
+  </div>
+<p><h3> Chill out with the G.O.T theme song, Toss a coin to your witcher from THE WITCHER or if i had a heart VIKINGS.</h3></p>
+<!-- add your video>
+
+
+<!-- check out my mail-->
+<!--bottom area-->
+  <div class="bottom-container">
+    <div class="flex-bottom-container">
+      <div class="copyright-details">
+      copyright &copy 2020 <a href="osinkolu.github.io" target="_blank"> OlufemiVictorWebsite.</a> Designed and developed by Olufemi Victor.
+      </div>
+      <a href="mailto: femiosinkolu@gmail.com" target= _blank><img id="gmail-icon" src="{{ url_for('static', filename='gmail.png') }}"></a>
+      <a href="https://www.linkedin.com/in/victor-olufemi-a44924192/" target= _blank><img id="linkedin-icon" src="{{ url_for('static', filename='linkedin.png') }}"></a>
+      <a href="https://twitter.com/profvictor001" target= _blank><img id="twitter-icon" src="{{ url_for('static', filename='twitter.png') }}"></a>
+      <a href="https://www.facebook.com/profile.php?id=100009859840576" target= _blank><img id="facebook-icon" src="{{ url_for('static', filename='facebook.png') }}"></a>
+    </div>
+  </div>
+</body>
+</html>

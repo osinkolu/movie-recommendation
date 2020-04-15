@@ -1,0 +1,137 @@
+/*this is the css script*/
+@charset "UTF-8";
+/*the box of the header*/
+.flex-container{
+  width: 100%;
+  display:flex;
+  background-color:white;
+  height: 250px;
+}
+#logo{
+  width: 60%;
+}
+.text1{
+  width: 100%;
+  display:flex;
+}
+.sampleText{
+  font-family:Impact, Hacttenschweiler, "Franklin Gothic Bold", "Ariel Black", "sans-serif";
+  font-size: 18pt;
+  color: cadetblue;
+  width:100%;
+  border: solid 2px black;
+  padding-top:10px;
+  padding-bottom:10px;
+  text-align: center;
+  background-color: ;
+  } 
+body{
+    background-color: silver;
+    text-align: center;
+}
+a:hover{
+    color: green;
+}
+#movies-clustered{
+  width: 100%;
+}
+#midArea{
+  position: relative;
+  left: 20%;
+}
+.movie-channel{
+  padding: 10px;
+  align-items: center;
+  position: relative;
+}
+.movie-channel:hover{
+  padding: 10px;
+  display: flex;
+  width:170px;
+  height:70px;
+}
+.movie-logos{
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.weekly-movies{
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  align-items: center;
+}
+.movie-picture{
+  display: flex;
+  flex-direction:row;
+}
+#each-weekly-pic{
+  margin:10px;
+  width:300px;
+}
+.movie-audio{
+  display: flex;
+  flex-direction:row;
+  position: relative;
+  align-items: center;
+}
+.bottom-container{
+  width: 100%;
+}
+.flex-bottom-container{
+  width: 100%;
+  display:flex;
+  background-color:grey;
+  height: 30px;
+  color: white;
+}
+#linkedin-icon{
+  height: 25px;
+  width: 30px;
+  margin-top: 2.5px;
+  margin-left: 20px;
+}
+#linkedin-icon:hover{
+  height: 30px;
+  width: 35px;
+  margin-top: 0px;
+ }
+#twitter-icon{
+  height: 25px;
+  width: 30px;
+  margin-top: 2.5px;
+  margin-left: 20px;
+}
+#twitter-icon:hover{
+  height: 30px;
+  width: 35px;
+  margin-top: 0px;
+ }
+#facebook-icon{
+  height: 25px;
+  width: 30px;
+  margin-top: 2.5px;
+  margin-left: 20px;
+}
+#facebook-icon:hover{
+  height: 30px;
+  width: 35px;
+  margin-top: 0px;
+ }
+#gmail-icon{
+  height: 25px;
+  width: 30px;
+  margin-top: 2.5px;
+  margin-left: 20px;
+}
+#gmail-icon:hover{
+  height: 30px;
+  width: 35px;
+  margin-top: 0px;
+ }
+.copyright-details{
+  margin-top: 10px;
+  width:80%;
+  text-align: left;
+  margin-left: 5px;
+}
